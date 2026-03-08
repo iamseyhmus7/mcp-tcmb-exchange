@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-tcmb-exchange"
+version = "0.1.0"
+description = "TCMB (Türkiye Cumhuriyet Merkez Bankası) döviz kurlarını MCP protokolü üzerinden sunan server"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Şeyhmus OK", email = "seyhmusok01@gmail.com" }
+]
+keywords = ["mcp", "tcmb", "exchange-rate", "currency", "turkey", "döviz"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+dependencies = [
+    "mcp>=1.19.0",
+    "httpx>=0.28.0",
+    "xmltodict>=0.13.0",
+    "anyio>=4.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.8.0",
+]
+
+# ── pip install sonrası `mcp-tcmb-exchange` komutu terminalde çalışır ──
+[project.scripts]
+mcp-tcmb-exchange = "mcp_tcmb_exchange.server:main"
+
+[project.urls]
+Homepage   = "https://github.com/iamseyhmus7/mcp-tcmb-exchange"
+Repository = "https://github.com/iamseyhmus7/mcp-tcmb-exchange"
+Issues     = "https://github.com/iamseyhmus7/mcp-tcmb-exchange/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_tcmb_exchange"]
+
+# ── Ruff linter ayarları ──────────────────────────────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+# ── Pytest ayarları ───────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths    = ["tests"]
