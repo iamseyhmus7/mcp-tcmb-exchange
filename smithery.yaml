@@ -1,5 +1,8 @@
 name: mcp-tcmb-exchange
-description: TCMB (Turkish Central Bank) daily exchange rates via MCP
+description: >
+  TCMB (Turkish Central Bank) daily exchange rates via MCP.
+  Supports live rates, currency conversion (TRY↔USD/EUR/GBP),
+  cross-rate calculation and historical data by date.
 categories:
   - finance
   - currency
@@ -7,4 +10,5 @@ categories:
 license: MIT
 startCommand:
   type: stdio
-  command: mcp-tcmb-exchange
+  command: uvx
+  args: ["mcp-tcmb-exchange"]
