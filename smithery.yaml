@@ -1,0 +1,10 @@
+name: mcp-tcmb-exchange
+description: TCMB (Turkish Central Bank) daily exchange rates via MCP
+categories:
+  - finance
+  - currency
+  - turkey
+license: MIT
+startCommand:
+  type: stdio
+  command: mcp-tcmb-exchange
