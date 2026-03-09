@@ -1,0 +1,22 @@
+{
+    "name": "mcp-tcmb-exchange",
+    "description": "TCMB (Turkish Central Bank) daily exchange rates via MCP.",
+    "tools": [
+        {
+            "name": "get_exchange_rate",
+            "description": "Tek dövizin günlük TCMB kurunu getirir"
+        },
+        {
+            "name": "list_all_rates",
+            "description": "Tüm TCMB kurlarını listeler"
+        },
+        {
+            "name": "convert_currency",
+            "description": "TL↔Döviz veya Döviz↔Döviz çevirimi"
+        },
+        {
+            "name": "convert_to_multiple",
+            "description": "Bir tutarı aynı anda birçok dövize çevirir"
+        }
+    ]
+}
