@@ -10,5 +10,4 @@ categories:
 license: MIT
 startCommand:
   type: stdio
-  command: uvx
-  args: ["mcp-tcmb-exchange"]
+  command: mcp-tcmb-exchange
