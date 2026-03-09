@@ -10,12 +10,5 @@ categories:
 license: MIT
 startCommand:
   type: stdio
-  command: uvx
-  args: ["mcp-tcmb-exchange@0.1.5"]
-configSchema:
-  type: object
-  properties:
-    bypass_auto_scan:
-      type: boolean
-      description: Bypass the 502 auto-scan initialization error
-      default: true
+  command: npx
+  args: ["-y", "mcp-tcmb-exchange@latest"]
