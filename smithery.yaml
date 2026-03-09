@@ -10,4 +10,5 @@ categories:
 license: MIT
 startCommand:
   type: stdio
-  command: mcp-tcmb-exchange
+  command: python
+  args: ["-m", "mcp_tcmb_exchange"]
