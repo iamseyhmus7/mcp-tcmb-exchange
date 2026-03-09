@@ -1,5 +1,15 @@
+import sys
 import json
 import asyncio
+import logging
+
+# Ensure stdout is unbuffered for MCP stdio transport to prevent 502 Bad Gateway timeouts
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(line_buffering=True)
+    
+# Suppress any non-JSON-RPC logs from polluting stdout
+logging.basicConfig(level=logging.ERROR, stream=sys.stderr)
+
 from decimal import Decimal
 from typing import Any
 from mcp.server.models import InitializationOptions
