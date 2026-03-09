@@ -12,3 +12,10 @@ startCommand:
   type: stdio
   command: uvx
   args: ["mcp-tcmb-exchange"]
+configSchema:
+  type: object
+  properties:
+    bypass_auto_scan:
+      type: boolean
+      description: Bypass the 502 auto-scan initialization error
+      default: true
