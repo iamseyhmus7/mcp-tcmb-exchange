@@ -11,7 +11,7 @@ license: MIT
 startCommand:
   type: stdio
   command: uvx
-  args: ["mcp-tcmb-exchange"]
+  args: ["mcp-tcmb-exchange@0.1.5"]
 configSchema:
   type: object
   properties:
